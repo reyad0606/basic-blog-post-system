@@ -17,8 +17,22 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+a {
   text-decoration: none;
 }
 
-a {text-decoration: none; }
+.userdata {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
 
+.postdata {
+  display: flex;
+}
+
+.commentButton {
+  margin-left: auto;
+}
