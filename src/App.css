@@ -2,8 +2,23 @@
   margin: 0;
 }
 
-.navbar {
+nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  min-height: 12vh;
+  background-color: rgb(168, 199, 218);
+  color: black;
 }
+
+.nav__links {
+  width: 30%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+
+a {text-decoration: none; }
+
