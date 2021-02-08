@@ -1,24 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function FetchData() {
-  const [comments, setComments] = useState('');
+function Comments({}) {
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+      .get(`https://jsonplaceholder.typicode.com/posts/${1}/comments`)
       .then((response) => {
-        console.log(response.data);
         setComments(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [id]);
+  }, []);
 
   return (
     <div>
-      <h1>{comments}</h1>
+      <ul>
+        {comments.map((comment) => (
+          <li key={comment.id} className='commentdata'>
+            {comment.body}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
